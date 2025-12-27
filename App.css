@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+
+.cloud-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120vw;
+  max-width: 150vw;      /* avoid extreme overflow */
+  min-width: 100vw;      /* never smaller than viewport */
+  height: 40vw;
+  min-height: 200px;     /* ensures visible on tiny screens */
+  max-height: 600px;     /* avoids stretching on ultra-wide */
+  background-image: url("/cloudBG.svg");
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  margin-left: -10vw;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .cloud-bg {
+    width: 150vw;
+    margin-left: -25vw;
+    height: 60vw;        /* taller on mobile for visibility */
+  }
+}
+
+
